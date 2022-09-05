@@ -13,11 +13,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <LinearLayout
             android:id="@+id/timeline_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lessons_count_selector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8sp">
+
+                <TextView
+                    android:id="@+id/lessons_count_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lessons_count"
+                    android:textSize="14sp" />
+
+                <SeekBar
+                    android:id="@+id/lessons_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="8"
+                    android:progress="1" />
+            </LinearLayout>
 
             <include
                 android:id="@+id/day1"
@@ -67,9 +90,9 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:contentDescription="@string/app_name"
+        android:onClick="createTimeline"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_save"
-        android:onClick="createTimeline"
         tools:ignore="ImageContrastCheck,UsingOnClickInXml" />
 </androidx.constraintlayout.widget.ConstraintLayout>

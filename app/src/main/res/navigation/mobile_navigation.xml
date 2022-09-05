@@ -9,12 +9,12 @@
         android:id="@+id/navigation_home"
         android:name="com.schedule.ui.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home_empty"/>
+        tools:layout="@layout/fragment_home_empty" />
     <fragment
         android:id="@+id/navigation_subjects"
         android:name="com.schedule.ui.SubjectsFragment"
         android:label="@string/title_subjects"
-        tools:layout="@layout/fragment_subjects"/>
+        tools:layout="@layout/fragment_subjects" />
     <fragment
         android:id="@+id/navigation_timetable"
         android:name="com.schedule.ui.TimetableFragment"

@@ -4,18 +4,23 @@ import android.annotation.SuppressLint;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.schedule.databinding.ActivityAddSubjectBinding;
+
 import java.util.Objects;
 
 public class AddSubject extends AppCompatActivity {
     Boolean edit;
-    Integer subjectId;
+    String subjectId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,17 +28,19 @@ public class AddSubject extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         edit = (Boolean) getIntent().getSerializableExtra("EDIT");
-        if (edit) subjectId = getIntent().getIntExtra("SUBJECT_ID", 0);
+        if (edit) subjectId = (String) getIntent().getSerializableExtra("SUBJECT_ID");
         if (!edit) this.setTitle("Добавление предмета");
         else this.setTitle("Редактирование предмета");
 
-        ((CheckBox)findViewById(R.id.if_lections)).setOnCheckedChangeListener((buttonView, isChecked) -> findViewById(R.id.lector_name).setVisibility(((CheckBox)findViewById(R.id.if_lections)).isChecked() ? View.VISIBLE : View.GONE));
-        ((CheckBox)findViewById(R.id.if_practics)).setOnCheckedChangeListener((buttonView, isChecked) -> findViewById(R.id.practics_teacher_name).setVisibility(((CheckBox)findViewById(R.id.if_practics)).isChecked() ? View.VISIBLE : View.GONE));
-        ((CheckBox)findViewById(R.id.if_labs)).setOnCheckedChangeListener((buttonView, isChecked) -> findViewById(R.id.labs_teacher_name).setVisibility(((CheckBox)findViewById(R.id.if_labs)).isChecked() ? View.VISIBLE : View.GONE));
+        ((CheckBox) findViewById(R.id.if_lections)).setOnCheckedChangeListener((buttonView, isChecked) -> findViewById(R.id.lector_name).setVisibility(((CheckBox) findViewById(R.id.if_lections)).isChecked() ? View.VISIBLE : View.GONE));
+        ((CheckBox) findViewById(R.id.if_practics)).setOnCheckedChangeListener((buttonView, isChecked) -> findViewById(R.id.practics_teacher_name).setVisibility(((CheckBox) findViewById(R.id.if_practics)).isChecked() ? View.VISIBLE : View.GONE));
+        ((CheckBox) findViewById(R.id.if_labs)).setOnCheckedChangeListener((buttonView, isChecked) -> findViewById(R.id.labs_teacher_name).setVisibility(((CheckBox) findViewById(R.id.if_labs)).isChecked() ? View.VISIBLE : View.GONE));
 
         if (edit) {
             SQLiteDatabase db = getBaseContext().openOrCreateDatabase("app.db", MODE_PRIVATE, null);
+            Log.i("query", "SELECT * FROM subjects WHERE id=" + subjectId);
             Cursor query = db.rawQuery("SELECT * FROM subjects WHERE id=" + subjectId, null);
+            Log.i("cursor", String.valueOf(query.getCount()));
             query.moveToFirst();
             String subjectName = query.getString(1);
             String lectorName = query.getString(2);
@@ -81,7 +88,7 @@ public class AddSubject extends AppCompatActivity {
         names[0] = findViewById(R.id.lector_name);
         names[1] = findViewById(R.id.practics_teacher_name);
         names[2] = findViewById(R.id.labs_teacher_name);
-        String[] sfx = new String[] {"лектора", "преподавателя на ПЗ", "преподавателя на ЛР"};
+        String[] sfx = new String[]{"лектора", "преподавателя на ПЗ", "преподавателя на ЛР"};
         for (int i = 0; i < 3; i++) {
             if (checkboxes[i].isChecked()) {
                 if (Objects.requireNonNull(names[i].getText()).length() == 0) {
@@ -99,9 +106,8 @@ public class AddSubject extends AppCompatActivity {
         SQLiteDatabase db = getBaseContext().openOrCreateDatabase("app.db", MODE_PRIVATE, null);
         db.execSQL("CREATE TABLE IF NOT EXISTS subjects (id INTEGER PRIMARY KEY, subject_name TEXT, lector_name TEXT, practics_teacher_name TEXT, labs_teacher_name TEXT)");
         if (edit) {
-            db.execSQL(String.format("UPDATE subjects SET subject_name='%s', lector_name=%s, practics_teacher_name=%s, labs_teacher_name=%s WHERE ID=%d", subjectName, lectorName, practicsName, labsName, subjectId));
-        }
-        else {
+            db.execSQL(String.format("UPDATE subjects SET subject_name='%s', lector_name=%s, practics_teacher_name=%s, labs_teacher_name=%s WHERE ID=%s", subjectName, lectorName, practicsName, labsName, subjectId));
+        } else {
             db.execSQL(String.format("INSERT OR IGNORE INTO subjects(subject_name, lector_name, practics_teacher_name, labs_teacher_name) VALUES ('%s', %s, %s, %s)", subjectName, lectorName, practicsName, labsName));
         }
 

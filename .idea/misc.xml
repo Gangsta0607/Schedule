@@ -4,11 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/drawable-anydpi/ic_add.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/drawable/ic_more.xml" value="0.1945" />
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout-land/fragment_timetable.xml" value="0.1693121693121693" />
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout-sw600dp/fragment_timetable.xml" value="0.15" />
-        <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/activity_add_duty.xml" value="0.18" />
+        <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/activity_add_duty.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/activity_add_subject.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/activity_add_timeline.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/activity_add_timeline_exception.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/activity_add_timetable.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/activity_duty_show.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
@@ -32,16 +34,22 @@
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/fragment_subjects_empty.xml" value="0.11322463768115942" />
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/fragment_timetable.xml" value="0.17391304347826086" />
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/fragment_timetable_empty.xml" value="0.11322463768115942" />
+        <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/new_app_widget.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/sample_subject_card.xml" value="0.1859375" />
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/subject_card.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/subject_part_for_adding.xml" value="0.18" />
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/subject_part_for_showing.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/timeline_day_card.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/timeline_lesson_time.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/timetable_add_daycard.xml" value="0.1" />
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/timetable_day.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/timetable_tab1.xml" value="0.12228260869565218" />
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/timetable_tab2.xml" value="0.23357664233576642" />
+        <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/layout/widget_duties_list_item.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/menu/subject_popup_menu.xml" value="0.2" />
         <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/menu/timetable_menu.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/Schedule2/app/src/main/res/xml/widget_metadata.xml" value="0.2" />
       </map>
     </option>
   </component>

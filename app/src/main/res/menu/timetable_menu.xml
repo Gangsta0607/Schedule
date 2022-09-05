@@ -3,12 +3,10 @@
     <item
         android:id="@+id/edit_timetable"
         android:icon="@drawable/ic_edit"
-        android:title="@string/change_schedule"
-        />
+        android:title="@string/change_schedule" />
 
     <item
         android:id="@+id/edit_timetable2"
         android:icon="@drawable/ic_edit"
-        android:title="@string/change_timeline"
-        />
+        android:title="@string/change_timeline" />
 </menu>

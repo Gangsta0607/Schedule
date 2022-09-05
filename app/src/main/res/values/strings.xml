@@ -1,4 +1,13 @@
 <resources>
+    <string-array name="dayNames">
+        <item>Понедельник</item>
+        <item>Вторник</item>
+        <item>Среда</item>
+        <item>Четверг</item>
+        <item>Пятница</item>
+        <item>Суббота</item>
+        <item>Воскресенье</item>
+    </string-array>
     <string name="app_name">Schedule</string>
     <string name="title_home">Главная</string>
     <string name="title_subjects">Предметы</string>
@@ -39,4 +48,21 @@
     <string name="change_schedule">Изменить расписание</string>
     <string name="change_timeline">Изменить расписание звонков</string>
     <string name="different_timeline_everyday">Расписание звонков разное каждый день</string>
+    <string name="edit">Редактировать</string>
+    <string name="subject_menu">Subject Menu</string>
+    <string name="lessons_count">Кол-во пар</string>
+    <string name="duty_menu">Меню долга</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="extra_data">Дополнительная информация</string>
+    <string name="choose_pass_date">Выберите дату сдачи</string>
+    <string name="on_even_week">По чётным неделям</string>
+    <string name="on_odd_week">По нечётным неделям</string>
+    <string name="day_of_week">День недели</string>
+    <string name="clear_subjects">Очистить предметы</string>
+    <string name="clear_timetable">Очистить расписание</string>
+    <string name="clear_timeline">Очистить расписание звонков</string>
+    <string name="clear_timeline_exceptions">Очистить исключения расписания звонков</string>
+    <string name="clear_duties">Очистить долги</string>
 </resources>

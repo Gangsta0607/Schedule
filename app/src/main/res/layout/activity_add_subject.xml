@@ -13,10 +13,10 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:contentDescription="@string/app_name"
+        android:onClick="addSubject"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_save"
-        android:onClick="addSubject"
         tools:ignore="UsingOnClickInXml" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -56,10 +56,11 @@
             android:hint="@string/teacher_name_hint"
             android:minHeight="48dp"
             android:textColorHint="#616161"
-            app:layout_constraintStart_toStartOf="parent"
             android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/if_lections"
             tools:ignore="DuplicateSpeakableTextCheck" />
+
         <CheckBox
             android:id="@+id/if_practics"
             android:layout_width="wrap_content"
@@ -74,10 +75,11 @@
             android:layout_height="wrap_content"
             android:hint="@string/teacher_name_hint"
             android:minHeight="48dp"
-            android:visibility="gone"
             android:textColorHint="#616161"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/if_practics" />
+
         <CheckBox
             android:id="@+id/if_labs"
             android:layout_width="wrap_content"
@@ -92,8 +94,8 @@
             android:layout_height="wrap_content"
             android:hint="@string/teacher_name_hint"
             android:minHeight="48dp"
-            android:visibility="gone"
             android:textColorHint="#616161"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/if_labs" />
     </androidx.constraintlayout.widget.ConstraintLayout>

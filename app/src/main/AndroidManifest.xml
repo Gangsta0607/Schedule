@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.schedule">
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,27 +15,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Schedule"
         tools:targetApi="31">
-
         <activity
-            android:name=".DutyShowActivity"
+            android:name=".AddTimelineException"
             android:exported="false" />
+
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
         <activity
             android:name=".AddDuty"
             android:exported="false" />
         <activity
-            android:name=".SubjectShowActivity"
-            android:exported="false" />
-        <activity
             android:name=".AddTimeline"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Создание расписания звонков" />
         <activity
             android:name=".AddTimetable"
             android:exported="false"
             android:label="Создание расписания" />
         <activity
             android:name=".AddSubject"
-            android:exported="false"
-            android:label="Добавить предмет" />
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

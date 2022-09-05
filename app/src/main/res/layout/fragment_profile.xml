@@ -1,15 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.ProfileFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/profile_actions_list"
+            android:orientation="vertical">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4sp"
+                android:text="@string/clear_subjects"
+                android:textAlignment="textStart"
+                android:id="@+id/delete_subjects"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4sp"
+                android:text="@string/clear_timetable"
+                android:textAlignment="textStart"
+                android:id="@+id/delete_timetable"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4sp"
+                android:text="@string/clear_timeline"
+                android:textAlignment="textStart"
+                android:id="@+id/delete_timeline"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4sp"
+                android:text="@string/clear_timeline_exceptions"
+                android:textAlignment="textStart"
+                android:id="@+id/delete_timeline_exceptions"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4sp"
+                android:text="@string/clear_duties"
+                android:textAlignment="textStart"
+                android:id="@+id/delete_duties"/>
+        </LinearLayout>
+    </ScrollView>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:textSize="20sp"
-        android:text="@string/nothing_in_here" />
-
-</FrameLayout>
+</LinearLayout>

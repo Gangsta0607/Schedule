@@ -1,140 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:columnCount="3"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:ignore="UsingOnClickInXml, HardcodedText">
+    android:orientation="vertical">
+
     <TextView
-        android:layout_height="wrap_content"
+        android:id="@+id/day_name"
         android:layout_width="wrap_content"
-        android:layout_columnSpan="3"
-        android:textSize="25sp"
+        android:layout_height="wrap_content"
         android:padding="10sp"
-        android:id="@+id/day_name"/>
-    <TextView
-        android:layout_width="wrap_content"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:id="@+id/lessons_list"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="1 пара"
-        android:textSize="20sp"
-        android:layout_gravity="center|center"
-        android:layout_margin="10sp" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sbj_start_time"
-        android:onClick="askForTime"
-        android:id="@+id/start1"
-        android:textSize="12sp"
-        android:layout_gravity="center|center"
-        android:layout_margin="10sp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sbj_end_time"
-        android:onClick="askForTime"
-        android:id="@+id/end1"
-        android:textSize="12sp"
-        android:layout_gravity="center|center"
-        android:layout_margin="10sp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2 пара"
-        android:textSize="20sp"
-        android:layout_gravity="center|center"
-        android:layout_margin="10sp" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sbj_start_time"
-        android:onClick="askForTime"
-        android:id="@+id/start2"
-        android:textSize="12sp"
-        android:layout_gravity="center|center"
-        android:layout_margin="10sp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sbj_end_time"
-        android:onClick="askForTime"
-        android:id="@+id/end2"
-        android:textSize="12sp"
-        android:layout_gravity="center|center"
-        android:layout_margin="10sp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="3 пара"
-        android:textSize="20sp"
-        android:layout_gravity="center|center"
-        android:layout_margin="10sp" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sbj_start_time"
-        android:onClick="askForTime"
-        android:id="@+id/start3"
-        android:textSize="12sp"
-        android:layout_gravity="center|center"
-        android:layout_margin="10sp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sbj_end_time"
-        android:onClick="askForTime"
-        android:id="@+id/end3"
-        android:textSize="12sp"
-        android:layout_gravity="center|center"
-        android:layout_margin="10sp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="4 пара"
-        android:textSize="20sp"
-        android:layout_gravity="center|center"
-        android:layout_margin="10sp" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sbj_start_time"
-        android:onClick="askForTime"
-        android:id="@+id/start4"
-        android:textSize="12sp"
-        android:layout_gravity="center|center"
-        android:layout_margin="10sp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sbj_end_time"
-        android:onClick="askForTime"
-        android:id="@+id/end4"
-        android:textSize="12sp"
-        android:layout_gravity="center|center"
-        android:layout_margin="10sp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="5 пара"
-        android:textSize="20sp"
-        android:layout_gravity="center|center"
-        android:layout_margin="10sp" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sbj_start_time"
-        android:onClick="askForTime"
-        android:id="@+id/start5"
-        android:textSize="12sp"
-        android:layout_gravity="center|center"
-        android:layout_margin="10sp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/sbj_end_time"
-        android:onClick="askForTime"
-        android:id="@+id/end5"
-        android:textSize="12sp"
-        android:layout_gravity="center|center"
-        android:layout_margin="10sp" />
-</GridLayout>
+        android:orientation="vertical" />
+</LinearLayout>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -14,8 +15,9 @@
             android:id="@+id/duty_name_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="3sp"
-            android:layout_marginHorizontal="10sp">
+            android:layout_marginHorizontal="10sp"
+            android:layout_marginVertical="3sp">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/duty_name"
                 android:layout_width="match_parent"
@@ -27,18 +29,21 @@
             android:id="@+id/subject_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="3sp"
             android:layout_marginHorizontal="10sp"
+            android:layout_marginVertical="3sp"
             android:padding="10sp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="10sp"
+                    android:paddingBottom="0sp"
                     android:text="@string/subject_name"
                     android:textSize="16sp" />
 
@@ -47,38 +52,44 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="20sp" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/datePickerCard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="3sp"
-            android:layout_marginHorizontal="10sp"
-            android:padding="10sp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
                 <TextView
-                    android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/pass_date"
-                    android:padding="10sp"
+                    android:layout_marginHorizontal="10sp"
+                    android:text="@string/extra_data"
                     android:textSize="16sp" />
 
-                <DatePicker
+                <EditText
+                    android:id="@+id/extra_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10sp"
+                    android:textSize="20sp"
+                    android:importantForAutofill="no"
+                    tools:ignore="LabelFor,TextFields"
+                     />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10sp"
+                    android:text="@string/pass_date"
+                    android:textSize="16sp" />
+
+                <Button
                     android:id="@+id/datePicker"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_margin="10sp" />
+                    android:layout_marginHorizontal="10sp"
+                    android:layout_marginBottom="10sp"
+                    android:text="@string/choose_pass_date" />
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
+
     </LinearLayout>
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -86,7 +97,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:contentDescription="@string/title_duties"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_save"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:src="@drawable/ic_add" />
+        app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
